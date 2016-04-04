@@ -7,7 +7,7 @@
  * @Author  Almsaeed Studio
  * @Support <http://www.almsaeedstudio.com>
  * @Email   <support@almsaeedstudio.com>
- * @version 2.3.1
+ * @version 2.3.3
  * @license MIT <http://opensource.org/licenses/MIT>
  */
 
@@ -394,7 +394,7 @@ function _init() {
       var checkElement = $this.next();
 
       //Check if the next element is a menu and is visible
-      if ((checkElement.is('.treeview-menu')) && (checkElement.is(':visible'))) {
+      if ((checkElement.is('.treeview-menu')) && (checkElement.is(':visible')) && (!$('body').hasClass('sidebar-collapse'))) {
         //Close the menu
         checkElement.slideUp(animationSpeed, function () {
           checkElement.removeClass('menu-open');
